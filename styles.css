@@ -1,0 +1,66 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.ruleta {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    overflow: hidden;
+    transform: rotate(0deg);
+    transition: transform 4s ease-out;
+}
+
+.segmento {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: hsl(calc(40 * var(--i)), 70%, 60%);
+    transform-origin: 100% 100%;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.segmento:nth-child(1) { transform: rotate(0deg); }
+.segmento:nth-child(2) { transform: rotate(40deg); }
+.segmento:nth-child(3) { transform: rotate(80deg); }
+.segmento:nth-child(4) { transform: rotate(120deg); }
+.segmento:nth-child(5) { transform: rotate(160deg); }
+.segmento:nth-child(6) { transform: rotate(200deg); }
+.segmento:nth-child(7) { transform: rotate(240deg); }
+.segmento:nth-child(8) { transform: rotate(280deg); }
+.segmento:nth-child(9) { transform: rotate(320deg); }
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
